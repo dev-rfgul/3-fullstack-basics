@@ -9,7 +9,8 @@ const App = () => {
     axios.get('/api/jokes')
       .then(res => setJokes(res.data))
       .catch(err => console.log(err))
-  })
+  },)
+
   return (
     <div className='main'>
       <h1>Jokes will be here</h1>
