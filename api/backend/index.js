@@ -3,7 +3,7 @@ import express from "express"
 const app = express();
 
 // get and post are the methords but use is a middle ware
-app.use(express.static('dist'))
+app.use(express.static('backend/dist'))
 
 const jokes = [
     {
