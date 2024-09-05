@@ -2,6 +2,9 @@ import express from "express"
 
 const app = express();
 
+// get and post are the methords but use is a middle ware
+app.use(express.static('dist'))
+
 const jokes = [
     {
         id: 1,
