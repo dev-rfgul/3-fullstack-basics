@@ -183,10 +183,10 @@ const randomNumber = Math.floor(Math.random() * 17);
 
 console.log(randomNumber)
 
-app.get("/", (req, res) => {
-    res.send("Hello World")
+// app.get("/", (req, res) => {
+//     res.send("Hello World")
 
-})
+// })
 
 app.get("/api/jokes", (req, res) => {
     res.send(jokes)
