@@ -1,6 +1,8 @@
 import express from "express"
+import dotenv from 'dotenv';
 
 const app = express();
+dotenv.config();
 
 // get and post are the methords but use is a middle ware
 app.use(express.static('dist'))
@@ -235,7 +237,8 @@ app.get("/api/jokes", (req, res) => {
 
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.BASE_URL || '3001';
+console.log(port)
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
