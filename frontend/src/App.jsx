@@ -37,7 +37,7 @@ const App = () => {
   const [randomNo, setRandomNo] = useState(0);
 
   useEffect(() => {
-    axios.get('localhost:3000/api/jokes')
+    axios.get('/api/jokes')
       .then(res => {
         console.log(res)
         setJokes(res.data)
