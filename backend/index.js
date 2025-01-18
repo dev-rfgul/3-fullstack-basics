@@ -8,175 +8,216 @@ app.use(express.static('dist'))
 const jokes = [
     {
         id: 1,
-        joke: "Why don't scientists trust atoms?",
-        punchline: "Because they make up everything!"
+        joke: "Why don’t we play hide and seek with mountains?",
+        punchline: "Because they always peak!",
+        urduJoke: "ہم پہاڑوں کے ساتھ چھپن چھپائی کیوں نہیں کھیلتے؟",
+        urduPunchline: "کیونکہ وہ ہمیشہ نظر آ جاتے ہیں!"
     },
     {
         id: 2,
-        joke: "What do you call fake spaghetti?",
-        punchline: "An impasta!"
+        joke: "Why do bees have sticky hair?",
+        punchline: "Because they use honeycombs!",
+        urduJoke: "شہد کی مکھیوں کے بال چپچپے کیوں ہوتے ہیں؟",
+        urduPunchline: "کیونکہ وہ شہد کے چھتے استعمال کرتی ہیں!"
     },
     {
         id: 3,
-        joke: "Why did the math book look sad?",
-        punchline: "Because it had too many problems."
+        joke: "Why did the skeleton go to the party alone?",
+        punchline: "Because he had no body to go with!",
+        urduJoke: "ڈھانچہ پارٹی میں اکیلا کیوں گیا؟",
+        urduPunchline: "کیونکہ اس کے پاس کوئی جسم ساتھ لے جانے کے لیے نہیں تھا!"
     },
     {
         id: 4,
-        joke: "Why don't skeletons fight each other?",
-        punchline: "They don't have the guts."
+        joke: "What do you call a snowman’s temper tantrum?",
+        punchline: "A meltdown!",
+        urduJoke: "برف والے آدمی کا غصہ کیا کہلاتا ہے؟",
+        urduPunchline: "پگھلنا!"
     },
     {
         id: 5,
-        joke: "What do you get when you cross a snowman and a vampire?",
-        punchline: "Frostbite!"
+        joke: "Why do cows wear bells?",
+        punchline: "Because their horns don’t work!",
+        urduJoke: "گائے گھنٹیاں کیوں پہنتی ہیں؟",
+        urduPunchline: "کیونکہ ان کے سینگ کام نہیں کرتے!"
     },
     {
         id: 6,
-        joke: "Why did the scarecrow win an award?",
-        punchline: "Because he was outstanding in his field!"
+        joke: "Why did the golfer bring an extra pair of pants?",
+        punchline: "In case he got a hole in one!",
+        urduJoke: "گولف کھیلنے والا ایک اضافی پینٹ کیوں لایا؟",
+        urduPunchline: "کہیں ایک سوراخ نہ ہو جائے!"
     },
     {
         id: 7,
-        joke: "Why don’t some couples go to the gym?",
-        punchline: "Because some relationships don’t work out."
+        joke: "What’s orange and sounds like a parrot?",
+        punchline: "A carrot!",
+        urduJoke: "کون سی نارنجی چیز طوطے جیسی لگتی ہے؟",
+        urduPunchline: "گاجر!"
     },
     {
         id: 8,
-        joke: "Why did the bicycle fall over?",
-        punchline: "Because it was two-tired!"
+        joke: "Why don’t eggs tell jokes?",
+        punchline: "Because they might crack up!",
+        urduJoke: "انڈے مذاق کیوں نہیں کرتے؟",
+        urduPunchline: "کیونکہ وہ ٹوٹ سکتے ہیں!"
     },
     {
         id: 9,
-        joke: "How does a penguin build its house?",
-        punchline: "Igloos it together."
+        joke: "Why did the tomato blush?",
+        punchline: "Because it saw the salad dressing!",
+        urduJoke: "ٹماٹر شرما کیوں گیا؟",
+        urduPunchline: "کیونکہ اس نے سلاد کا لباس دیکھا!"
     },
     {
         id: 10,
-        joke: "What do you call cheese that isn't yours?",
-        punchline: "Nacho cheese."
+        joke: "What do you call a factory that makes good products?",
+        punchline: "A satisfactory!",
+        urduJoke: "اچھی چیزیں بنانے والی فیکٹری کو کیا کہتے ہیں؟",
+        urduPunchline: "سنتوش کارخانہ!"
     },
     {
         id: 11,
-        joke: "Why can't you give Elsa a balloon?",
-        punchline: "Because she will let it go."
+        joke: "Why do seagulls fly over the ocean?",
+        punchline: "Because if they flew over the bay, they’d be bagels!",
+        urduJoke: "سی گلز سمندر کے اوپر کیوں اڑتی ہیں؟",
+        urduPunchline: "کیونکہ اگر وہ خلیج کے اوپر اڑیں تو وہ بیگلز بن جائیں گی!"
     },
     {
         id: 12,
-        joke: "What did one ocean say to the other ocean?",
-        punchline: "Nothing, they just waved."
+        joke: "What did the ocean say to the beach?",
+        punchline: "Nothing, it just waved.",
+        urduJoke: "سمندر نے ساحل سے کیا کہا؟",
+        urduPunchline: "کچھ نہیں، بس ہاتھ ہلایا!"
     },
     {
         id: 13,
-        joke: "Why was the math book always worried?",
-        punchline: "It had too many variables."
+        joke: "What happens when you cross a snowman and a dog?",
+        punchline: "Frostbite!",
+        urduJoke: "اگر برف والے آدمی اور کتے کو ملائیں تو کیا ہوگا؟",
+        urduPunchline: "فراسٹ بائٹ!"
     },
     {
         id: 14,
-        joke: "What kind of shoes do ninjas wear?",
-        punchline: "Sneakers!"
+        joke: "Why don’t skeletons go skydiving?",
+        punchline: "They don’t have the guts!",
+        urduJoke: "ڈھانچے اسکائی ڈائیونگ کیوں نہیں کرتے؟",
+        urduPunchline: "کیونکہ ان کے پاس ہمت نہیں ہوتی!"
     },
     {
         id: 15,
-        joke: "Why was the computer cold?",
-        punchline: "It left its Windows open."
+        joke: "What do you call fake noodles?",
+        punchline: "An impasta!",
+        urduJoke: "جعلی نوڈلز کو کیا کہتے ہیں؟",
+        urduPunchline: "ایک امپاسٹا!"
     },
     {
         id: 16,
-        joke: "Why did the golfer bring two pairs of pants?",
-        punchline: "In case he got a hole in one."
+        joke: "Why was the math book sad?",
+        punchline: "It had too many problems.",
+        urduJoke: "ریاضی کی کتاب اداس کیوں تھی؟",
+        urduPunchline: "کیونکہ اس میں بہت زیادہ مسائل تھے!"
     },
     {
         id: 17,
-        joke: "What do you get when you cross a snowman with a dog?",
-        punchline: "Frostbite."
+        joke: "What’s a snake’s favorite subject?",
+        punchline: "Hiss-tory!",
+        urduJoke: "سانپ کا پسندیدہ مضمون کیا ہے؟",
+        urduPunchline: "ہسٹری!"
     },
     {
         id: 18,
-        joke: "استاد: بتاؤ اللہ میاں کی کون سی نعت سب سے بڑی ہے؟",
-        punchline: "شاگرد: حضور سر کی دعا، اس میں کبھی 'آمین' ہی نہیں ہوتا!"
+        joke: "Why can’t you trust stairs?",
+        punchline: "Because they’re always up to something!",
+        urduJoke: "سیڑھیوں پر بھروسہ کیوں نہیں کیا جا سکتا؟",
+        urduPunchline: "کیونکہ وہ ہمیشہ کچھ نہ کچھ کر رہی ہوتی ہیں!"
     },
     {
         id: 19,
-        joke: "ایک آدمی ڈاکٹر کے پاس گیا اور کہا: ڈاکٹر صاحب مجھے رات کو نیند نہیں آتی۔",
-        punchline: "ڈاکٹر: سونے سے پہلے بکری کے بال گن لیا کرو۔"
+        joke: "Why did the barber win the race?",
+        punchline: "He knew all the shortcuts!",
+        urduJoke: "نائی نے دوڑ کیوں جیت لی؟",
+        urduPunchline: "کیونکہ اسے تمام شارٹ کٹ معلوم تھے!"
     },
     {
         id: 20,
-        joke: "استاد: سب سے زیادہ بہادر کون ہوتا ہے؟",
-        punchline: "شاگرد: وہ جس کی بیوی جاگ رہی ہو اور وہ ٹی وی دیکھ رہا ہو۔"
+        joke: "Why did the cookie go to the hospital?",
+        punchline: "Because it felt crumby!",
+        urduJoke: "بِسکٹ اسپتال کیوں گیا؟",
+        urduPunchline: "کیونکہ وہ بکھرنے والا محسوس کر رہا تھا!"
     },
     {
         id: 21,
-        joke: "بیوی: سنو، اگر میں مر جاؤں تو تم کیا کرو گے؟",
-        punchline: "شوہر: میں بھی پاگل ہو جاؤں گا۔ روز خوشی مناؤں گا۔"
+        joke: "What did one wall say to the other wall?",
+        punchline: "I’ll meet you at the corner!",
+        urduJoke: "ایک دیوار نے دوسری دیوار سے کیا کہا؟",
+        urduPunchline: "کونے پر ملتے ہیں!"
     },
     {
         id: 22,
-        joke: "بیوی: آپ مجھے ایک بات بتاؤ، جب میں غصے میں ہوتی ہوں تو آپ گھر سے باہر کیوں چلے جاتے ہیں؟",
-        punchline: "شوہر: تاکہ تمہارا غصہ ختم ہونے تک میں زندہ رہوں۔"
+        joke: "Why did the bicycle fall over?",
+        punchline: "Because it was two-tired!",
+        urduJoke: "سائیکل کیوں گر گیا؟",
+        urduPunchline: "کیونکہ وہ دو تھکا ہوا تھا!"
     },
     {
         id: 23,
-        joke: "دو دوست آپس میں بات کر رہے تھے۔",
-        punchline: "پہلا: میری بیوی بہت اچھی ہے، میری ہر بات مانتی ہے۔\nدوسرا: کیا بات ہے! میری بیوی بھی ایسا ہی کہتی ہے۔"
+        joke: "What do you call a bear with no teeth?",
+        punchline: "A gummy bear!",
+        urduJoke: "دانتوں کے بغیر ریچھ کو کیا کہتے ہیں؟",
+        urduPunchline: "گمی بیئر!"
     },
     {
         id: 24,
-        joke: "ایک آدمی نے دوسرے سے کہا: یار تمہاری شادی کب ہوئی؟",
-        punchline: "دوسرا آدمی: جب میری بیوی کو مجھ سے محبت ہوگئی۔"
+        joke: "Why did the banana go to the doctor?",
+        punchline: "It wasn’t peeling well!",
+        urduJoke: "کیلا ڈاکٹر کے پاس کیوں گیا؟",
+        urduPunchline: "کیونکہ اس کی چھلک اچھی نہیں لگ رہی تھی!"
     },
     {
         id: 25,
-        joke: "استاد: بتاؤ سب سے زیادہ پر سکون انسان کون ہے؟",
-        punchline: "شاگرد: وہ جس کی بیوی اس کے والدین کے ساتھ رہتی ہو۔"
+        joke: "What kind of room doesn’t have doors?",
+        punchline: "A mushroom!",
+        urduJoke: "کون سا کمرہ دروازوں کے بغیر ہوتا ہے؟",
+        urduPunchline: "ایک مشروم!"
     },
     {
         id: 26,
-        joke: "بیوی: آپ میرے لئے کیا لا رہے ہو؟",
-        punchline: "شوہر: سانس، وہ بھی غصے میں لے رہا ہوں۔"
+        joke: "Why are skeletons so calm?",
+        punchline: "Because nothing gets under their skin!",
+        urduJoke: "ڈھانچے اتنے پرسکون کیوں ہوتے ہیں؟",
+        urduPunchline: "کیونکہ کچھ بھی ان کی جلد کے نیچے نہیں جاتا!"
     },
     {
         id: 27,
-        joke: "شوہر: میرے جوتے کہاں ہیں؟",
-        punchline: "بیوی: آپ جوتے اٹھا کر جائیں گے یا پھر بیوی کو؟"
+        joke: "Why did the computer go to art school?",
+        punchline: "It wanted to draw more attention!",
+        urduJoke: "کمپیوٹر آرٹ اسکول کیوں گیا؟",
+        urduPunchline: "کیونکہ وہ مزید توجہ حاصل کرنا چاہتا تھا!"
     },
     {
         id: 28,
-        joke: "بیوی: آپ کو ہمیشہ غصہ کیوں آتا ہے؟",
-        punchline: "شوہر: تاکہ آپ خوش رہیں۔"
+        joke: "Why don’t oysters share their pearls?",
+        punchline: "Because they’re shellfish!",
+        urduJoke: "سیپی اپنے موتی کیوں نہیں دیتی؟",
+        urduPunchline: "کیونکہ وہ خود غرض ہیں!"
     },
     {
         id: 29,
-        joke: "ایک آدمی ڈاکٹر کے پاس گیا: ڈاکٹر صاحب میرے دماغ میں آوازیں آتی ہیں۔",
-        punchline: "ڈاکٹر: تمہارے دماغ میں جگہ ہی نہیں، یہ آوازیں گونجتی ہیں۔"
+        joke: "What’s a cat’s favorite color?",
+        punchline: "Purr-ple!",
+        urduJoke: "بلی کا پسندیدہ رنگ کون سا ہے؟",
+        urduPunchline: "پُرپل!"
     },
     {
         id: 30,
-        joke: "استاد: تم کیوں رو رہے ہو؟",
-        punchline: "شاگرد: میں نے اپنے والد صاحب کی ٹی وی پر آنے والی تنخواہ دیکھ لی۔"
-    },
-    {
-        id: 31,
-        joke: "استاد: بتاؤ تم کون سی کتاب پڑھ رہے ہو؟",
-        punchline: "شاگرد: واٹس ایپ کے پیغامات کی کتاب!"
-    },
-    {
-        id: 32,
-        joke: "ایک آدمی نے کہا: یار، یہ بیوی میرے جوتے کیوں کھا جاتی ہے؟",
-        punchline: "دوست: کیوں کہ تم ہمیشہ جوتے بیوی کے دل کے قریب رکھتے ہو!"
-    },
-    {
-        id: 33,
-        joke: "شوہر: تم ہر بات پر میری مخالفت کیوں کرتی ہو؟",
-        punchline: "بیوی: کیونکہ یہ میرے حقوق میں شامل ہے!"
-    },
-    {
-        id: 34,
-        joke: "بیوی: آپ کبھی مجھے سچ بول کر نہیں دکھائیں گے۔",
-        punchline: "شوہر: اس لئے کہ میں آپ کو خوش رکھنا چاہتا ہوں!"
+        joke: "Why are ghosts bad liars?",
+        punchline: "Because you can see right through them!",
+        urduJoke: "بھوت جھوٹے کیوں ہوتے ہیں؟",
+        urduPunchline: "کیونکہ آپ ان کے پار دیکھ سکتے ہیں!"
     }
 ];
+
 
 
 const randomNumber = Math.floor(Math.random() * 17);

@@ -37,15 +37,17 @@ const App = () => {
   const [randomNo, setRandomNo] = useState(0);
 
   useEffect(() => {
-    axios.get('/api/jokes')
+    axios.get('localhost:3000/api/jokes')
       .then(res => {
+        console.log(res)
         setJokes(res.data)
         const randomNum = Math.floor(Math.random() * res.data.length)
         setRandomNo(randomNum)
       })
       .catch(err => console.log(err))
   }, [])
-  
+
+  console.log(jokes)
   return (
     <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300'>
       <div className='bg-white p-6 rounded-xl shadow-md max-w-lg w-full text-center'>
@@ -54,6 +56,8 @@ const App = () => {
           <div className='space-y-4'>
             <p className='text-xl font-semibold text-gray-800'>{jokes[randomNo].joke}</p>
             <p className='text-lg  text-gray-600'>{jokes[randomNo].punchline}</p>
+            <p className='text-xl font-semibold text-gray-800'>{jokes[randomNo].urduJoke}</p>
+            <p className='text-lg  text-gray-600'>{jokes[randomNo].urduPunchLine}</p>
           </div>
         ) : (
           <p className='text-xl font-semibold text-gray-700'>Loading...</p>
